@@ -1,0 +1,22 @@
+# 编译产物
+bin/
+obj/
+Source/bin/
+Source/obj/
+
+# 引用的 Celeste DLL，各人本地放，不进仓库
+lib-stripped/
+
+# 打包出来的合集 zip
+*.zip
+
+# 编辑器
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# 系统垃圾
+.DS_Store
+Thumbs.db

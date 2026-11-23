@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    组织方式参考 DBBHelper：
+    - 工程放在 Source/，编译产物拷到 ../bin，everest.yaml 里写 DLL: bin/ExampleCollab.dll
+    - 目录按用途分类（CoreModule / Mechanism / VanillaEntity / SpecialEntity / Patch），
+      命名空间统一挂在 Celeste.Mod.ExampleCollab 下，不跟目录名一一对应
+    - 引用 Celeste 的 DLL 不拷进游戏目录（Private=false），只编译自己的程序集
+
+    编译：
+      dotnet build Source -c Release
+    没有 Celeste.dll 时用 -p:CelesteRoot=<包含 Celeste.dll/FNA.dll/MMHOOK_Celeste.dll 的目录>
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>ExampleCollab</AssemblyName>
+    <RootNamespace>Celeste.Mod.ExampleCollab</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <CelesteRoot Condition="'$(CelesteRoot)' == '' and '$(CELESTE_ROOT)' != ''">$(CELESTE_ROOT)</CelesteRoot>
+    <CelesteRoot Condition="'$(CelesteRoot)' == '' and '$(OS)' == 'Windows_NT'">C:\SteamLibrary\steamapps\common\Celeste</CelesteRoot>
+    <CelesteRoot Condition="'$(CelesteRoot)' == ''">$(MSBuildThisFileDirectory)../lib-stripped</CelesteRoot>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Celeste"><HintPath>$(CelesteRoot)/Celeste.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="FNA"><HintPath>$(CelesteRoot)/FNA.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MMHOOK_Celeste"><HintPath>$(CelesteRoot)/MMHOOK_Celeste.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <!-- 编译完把 dll 和 pdb 放到 mod 的 bin/，Everest 只认这个位置 -->
+  <Target Name="CopyModAssembly" AfterTargets="Build">
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="$(MSBuildThisFileDirectory)../bin" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).pdb" DestinationFolder="$(MSBuildThisFileDirectory)../bin" Condition="Exists('$(OutputPath)$(AssemblyName).pdb')" />
+  </Target>
+
+</Project>

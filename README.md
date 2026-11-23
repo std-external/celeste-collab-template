@@ -10,6 +10,7 @@
 4. `CollabUtils2CollabID.txt` 内容改成同一个 id。
 5. 把 `AuthorA` / `ExampleMap` 换成真作者和真图，删掉示例文件，只留 `.gitkeep` 占位。
 6. 按 `docs/01-模板与目录规范.md` 往对应格子里放东西。
+7. 改完代码跑一次 `dotnet build Source -c Release`，产物会自己进 `bin/`。
 
 ## 规矩速记
 
@@ -27,13 +28,14 @@
 | `docs/01-模板与目录规范.md` | 目录树，每格放什么，一张图可以有什么 |
 | `docs/02-素材命名规范.md` | 四段式命名、作用词表、全局唯一清单、反例 |
 | `docs/03-提交与合并检查清单.md` | 交图、合并、打包、验收 |
+| `docs/04-代码模组组织.md` | Source/ 目录怎么分、命名空间、和 everest.yaml 的对应、HLSL 流程 |
 | `docs/templates/` | meta、贴纸、心换皮、作者交图说明的样例 |
 
 ## 工具
 
 ```
-python3 tools/check_assets.py .                      # 查命名和路径
-python3 tools/merge_dialog.py --into Dialog/English.txt contrib/*/*/dialog.en.txt
+dotnet run --project tools/CollabTools -- check .    # 查命名和路径
+dotnet run --project tools/CollabTools -- merge --into Dialog/English.txt contrib/*/*/dialog.en.txt
 ```
 
 检查脚本会报三类：错误（必须改）、警告（建议改）、提示（可以不管）。
