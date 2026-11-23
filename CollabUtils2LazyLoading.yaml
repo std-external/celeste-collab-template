@@ -1,0 +1,11 @@
+# 懒加载：合集大了以后启动会卡，开了只加载当前地图用到的贴图。
+# 打开后每张图要随 bin 一起交 .texturecache.txt，步骤见 docs/03-提交与合并检查清单.md
+Enable: true
+
+# 需要常驻、不能懒加载的前缀（相对 Graphics/Atlases/Gui 和 Graphics/Atlases/Gameplay）。
+# 大厅/日记/UI 用到的贴图才需要列进来，一般可以整段不写。
+#ExcludedPrefixes:
+#  Gui:
+#    - ExampleCollab/Lobby/
+#  Gameplay:
+#    - decals/ExampleCollab/Shared/

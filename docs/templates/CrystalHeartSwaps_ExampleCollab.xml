@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 放在 Graphics/CollabUtils2/CrystalHeartSwaps_ExampleCollab.xml
+     节点名 = crystalHeart_ + 地图路径展开（斜杠横杠空白都换成下划线）
+     这里把 1-Main 大厅和 AuthorA_ExampleMap 的心换成春游同款的「专家」橙心；
+     想换别的用 CollabUtils2/crystalHeart/ 下的 bgr(蓝) imd adv exp gdm，或者自己丢到 Graphics/Atlases/Gui/ExampleCollab/ 下改 path。 -->
+<Sprites>
+  <crystalHeart_ExampleCollab_0_Lobbies_1_Main path="CollabUtils2/crystalHeart/adv/" start="idle">
+    <Center />
+    <Loop id="idle" path="" frames="0" />
+    <Loop id="spin" path="" frames="0*10,1-10" delay="0.08" />
+    <Loop id="fastspin" path="" frames="1-10" delay="0.08" />
+  </crystalHeart_ExampleCollab_0_Lobbies_1_Main>
+
+  <crystalHeart_ExampleCollab_1_Main_AuthorA_ExampleMap path="CollabUtils2/miniHeart/bgr/" start="idle">
+    <Center />
+    <Loop id="idle" path="" frames="0" />
+    <Loop id="spin" path="" frames="0*10,1-10" delay="0.08" />
+    <Loop id="fastspin" path="" frames="1-10" delay="0.08" />
+  </crystalHeart_ExampleCollab_1_Main_AuthorA_ExampleMap>
+</Sprites>

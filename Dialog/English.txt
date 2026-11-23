@@ -1,0 +1,27 @@
+modname_ExampleCollab= Example Collab
+endscreen_collabname_ExampleCollab= EC
+
+# ── 大厅 ────────────────────────────────────────────
+# 键名 = Maps 下的路径，斜杠和横杠都换成下划线
+ExampleCollab_0_Lobbies_1_Main= Main Lobby
+
+# ── 小图 ────────────────────────────────────────────
+# Maps/ExampleCollab/1-Main/AuthorA_ExampleMap.bin
+ExampleCollab_1_Main_AuthorA_ExampleMap= Example Map
+ExampleCollab_1_Main_AuthorA_ExampleMap_author=
+  by AuthorA
+ExampleCollab_1_Main_AuthorA_ExampleMap_collabcredits=
+  Map:{# 2a2a2a} AuthorA{#
+  Art:{# 2a2a2a} AuthorA{#
+  Code:{# 2a2a2a} AuthorA{#
+ExampleCollab_1_Main_AuthorA_ExampleMap_collabcreditstags=
+  Intermediate
+  Custom Gimmick
+
+# 大厅日记里显示的名字（不写就用章节名）
+ExampleCollab_0_Lobbies_1_Main_journal= Main
+
+# 对话正文，建议也带上合集_大厅_作者_地图 前缀
+ExampleCollab_1_Main_AuthorA_ExampleMap_intro=
+  [MADELINE normal]
+  (这里是一段示例对话。)

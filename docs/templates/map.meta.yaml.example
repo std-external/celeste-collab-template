@@ -1,0 +1,24 @@
+# 单张图的 .meta.yaml 模板（放到 Maps/<合集>/<大厅>/<作者>_<地图>.meta.yaml）
+# 只写需要的字段，其余交给 Lönn 的 Metadata 窗口。
+Icon: areas/ExampleCollab/1-Main/AuthorA_ExampleMap   # 章节图标，图片在 Graphics/Atlases/Gui/areas/ExampleCollab/1-Main/AuthorA_ExampleMap.png
+TitleBaseColor: 6c7c81        # 章节卡片底色
+TitleAccentColor: 2f344b      # 章节卡片深色
+TitleTextColor: ffffff
+IntroType: Jump               # Jump / WalkInRight / WalkInLeft / WakeUp / None
+Dreaming: false
+ColorGrade: none
+Wipe: Celeste.AngledWipe
+DarknessAlpha: 0.05
+BloomBase: 0.0
+BloomStrength: 1.0
+Modes:
+  - AudioState:
+      Music: event:/ExampleCollab_AuthorA_ExampleMap_bgm/main
+      Ambience: event:/env/amb/01_main
+    Inventory: Default
+    HeartIsEnd: false
+
+# 可选：随机天气（flag 名带全前缀，避免和别人撞）
+#CollabUtilsRandomizedFlags:
+#  ExampleCollab_AuthorA_ExampleMap_rain: 0.3
+#  ExampleCollab_AuthorA_ExampleMap_night: 0.2

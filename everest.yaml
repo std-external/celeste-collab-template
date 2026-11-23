@@ -1,0 +1,9 @@
+# 合集主 mod 的清单。改 Name 前先把整个模板里的 ExampleCollab 全部替换掉。
+# 版本号用 semver；依赖里把实际用到的 helper 都写上（Lönn 保存地图时会自动补，这里只是留底）。
+- Name: ExampleCollab
+  Version: 0.1.0
+  Dependencies:
+    - Name: Everest
+      Version: 1.6696.0
+    - Name: CollabUtils2
+      Version: 1.13.6

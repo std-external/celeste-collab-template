@@ -1,0 +1,21 @@
+modname_ExampleCollab= 示例合集
+endscreen_collabname_ExampleCollab= 示例
+
+ExampleCollab_0_Lobbies_1_Main= 主大厅
+
+ExampleCollab_1_Main_AuthorA_ExampleMap= 示例地图
+ExampleCollab_1_Main_AuthorA_ExampleMap_author=
+  by AuthorA
+ExampleCollab_1_Main_AuthorA_ExampleMap_collabcredits=
+  Map:{# 2a2a2a} AuthorA{#
+  Art:{# 2a2a2a} AuthorA{#
+  Code:{# 2a2a2a} AuthorA{#
+ExampleCollab_1_Main_AuthorA_ExampleMap_collabcreditstags=
+  Intermediate
+  Custom Gimmick
+
+ExampleCollab_0_Lobbies_1_Main_journal= 主大厅
+
+ExampleCollab_1_Main_AuthorA_ExampleMap_intro=
+  [MADELINE normal]
+  （这里是一段示例对话。）

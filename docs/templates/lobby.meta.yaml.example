@@ -1,0 +1,19 @@
+# 大厅的 .meta.yaml 模板（Maps/<合集>/0-Lobbies/<序号>-<大厅名>.meta.yaml）
+# 大厅的「日记贴纸」和「山体贴图」都在这里配，不写就全用默认。
+Mountain:
+  ShowSnow: false
+  MountainTextureDirectory: "ExampleCollab/0-Lobbies/1-Main"   # 贴图目录，指向 Graphics/Atlases/Mountain/ 下自己放的
+  FogColors:
+    - 2596be
+  Rotate: true
+  BackgroundMusic: event:/ExampleCollab_lobby_bgm/main
+
+# 日记首页的贴纸：打完列表里的图才出现
+Stickers:
+  - Path: ExampleCollab/1-Main/AuthorA_ExampleMap      # Graphics/Atlases/Stickers/ExampleCollab/1-Main/AuthorA_ExampleMap.png
+    FinishedMaps:
+      - ExampleCollab/1-Main/AuthorA_ExampleMap
+    X: 120
+    Y: 222
+    Scale: 0.9
+    Rotation: 14
